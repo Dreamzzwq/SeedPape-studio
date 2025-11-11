@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SeedPaper Studio | Kertas Benih Ramah Lingkungan</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #2f4f2f;
+    }
+
+    .logo img {
+      height: 50px;
+      width: 50px;
+      margin-right: 10px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="gambar/baimdongo.png" alt="Logo SeedPaper Studio" />
+        SeedPaper Studio
+      </div>
+      <nav>
+        <a href="index.html" class="active">Beranda</a>
+        <a href="produk.html">Produk</a>
+      </nav>
+      <a href="produk.html" class="btn-primary">Belanja Sekarang</a>
+    </div>
+  </header>
+
+  <section class="carousel">
+    <div class="slides">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1400&q=60" alt="Kertas benih 1">
+      <img src="https://images.unsplash.com/photo-1516822003754-cca485356ecb?auto=format&fit=crop&w=1400&q=60" alt="Kertas benih 2">
+      <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=60" alt="Kertas benih 3">
+    </div>
+    <div class="overlay">
+      <h1>Kertas Benih yang Membawa Kenangan Bersemi 🌿</h1>
+      <p>Desain minimalis dan ramah lingkungan — sempurna untuk undangan, hadiah, dan souvenir.</p>
+      <a href="produk.html" class="btn-primary">Lihat Produk</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <h2 class="section-title">Produk Unggulan</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="gambar/kertas satu.jpg" alt="">
+        <div class="info">
+          <h3>Kertas Benih Cabai</h3>
+          <p>Kertas yang ramah lingkungan dengan benih cabai.</p>
+          <span class="price">Rp 25.000</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="gambar/kertas dua.jpg" alt="">
+        <div class="info">
+          <h3>Kertas Benih</h3>
+          <p>Kertas yang dapat ditanam dengan benih.</p>
+          <span class="price">Rp 18.000</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="steps">
+      <h2 class="section-title">Cara Menanam</h2>
+      <div class="step-grid">
+        <div class="step">
+          <h4>1. Basahi</h4>
+          <p>Basahi kertas benih agar lembab, tapi jangan sampai tergenang.</p>
+        </div>
+        <div class="step">
+          <h4>2. Tanam</h4>
+          <p>Tanam di tanah sedalam 0.5–1 cm dan tekan ringan.</p>
+        </div>
+        <div class="step">
+          <h4>3. Siram & Tumbuh</h4>
+          <p>Rawat dengan air setiap hari hingga kecambah tumbuh 🌱</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 SeedPaper Studio — Kenangan yang Bisa Tumbuh.</p>
+      <p>Email: hello@seedpaper.id | Instagram: @seedpaper.studio</p>
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }, 4000);
+  </script>
+</body>
+</html>
